@@ -7,4 +7,4 @@ print("Enter a number:", num)
 # 4
 print("Square of the number is", num * num)
 # 5
-print("Have a great day Boy!")
+print("Have a great day Boy losts of love!")
