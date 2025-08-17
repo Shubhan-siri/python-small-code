@@ -1,7 +1,7 @@
 # 1
 print("Hello Shubhanshu Sen")
 # 2
-num = 9
+num = 12
 # 3
 print("Enter a number:", num)
 # 4
