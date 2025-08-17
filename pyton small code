@@ -1,9 +1,9 @@
 # 1
-usertext = input("Shubhanshu Sen")
+print("Hello Shubhanshu Sen")
 # 2
-print("Hello", shubhan)
+num = 9
 # 3
-num = int(input("999999999: "))
+print("Enter a number:", num)
 # 4
 print("Square of the number is", num * num)
 # 5
