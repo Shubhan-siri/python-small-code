@@ -12,5 +12,73 @@ sudo systemctl start apache2
 # Enable Apache to start on boot
 sudo systemctl enable apache2
 
-# Create a simple HTML file to verify the web server is running
-echo "<html><h1>Welcome to Shubhanshu world!</h1></html>" | sudo tee /var/www/html/index.html
+# Create a high-quality modern landing page
+sudo tee /var/www/html/index.html > /dev/null << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Shubhanshu World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #fff;
+      color: #2575fc;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #2575fc;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Welcome to Shubhanshu World!</h1>
+  <p>Your Apache web server is running successfully.</p>
+  <a href="#">Explore More</a>
+  <footer>Powered by Apache | Deployed with Bash 🚀</footer>
+</body>
+</html>
+EOF
